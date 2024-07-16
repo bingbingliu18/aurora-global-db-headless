@@ -32,7 +32,7 @@ sh FailoverGlobalDBHeadless.sh -g <'Global Cluster Identfier'> -R <'secondary cl
 
 ## Sample Input
 ```
-sh FailoverGlobalDBHeadless.sh -g aurora-global-db-headless -R us-west-2 -r aurora-global-db-headless-cluster-1 -s db.r6g.large -n us-west-2b;
+sh FailoverGlobalDBHeadless.sh -g aurora-global-db-headless -R us-west-2 -r aurora-global-db-headless-cluster-1 -s db.r6g.large -n us-west-2b
 ```
 
 ## Sample Output
