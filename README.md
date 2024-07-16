@@ -26,7 +26,7 @@ To run the script
 - Make the script executable ```chmod +x FailoverGlobalDBHeadless.sh ```
 - Use the below instructions to invoke the script
 ```
-sh FailoverGlobalDBHeadless.sh -g <'Global Cluster Identfier'> -R <'secondary cluster region'> -r <'secondary cluster to promote'> -s <'Added DB instance size'> -n <'Added DB instance AZ'>;
+sh FailoverGlobalDBHeadless.sh -g <'Global Cluster Identfier'> -R <'secondary cluster region'> -r <'secondary cluster to promote'> -s <'Added DB instance size'> -n <'Added DB instance AZ'>
 
 ```
 
