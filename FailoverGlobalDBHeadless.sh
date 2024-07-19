@@ -94,7 +94,8 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     echo "Canceled creating a new instance"
     exit 0
 fi
-
+start_time=$(date +%s)
+echo "Task started at $(date -d @$start_time +'%Y-%m-%d %H:%M:%S')"
 # Create a new database instance
 DB_INSTANCE_IDENTIFIER="$REGION_CLUSTER_ID-instance-1"
 aws rds create-db-instance \
@@ -126,3 +127,8 @@ removeFromGlobalCluster
 waitForPromotionToComplete "$GLOBAL_CLUSTER_ID" "$REGION_CLUSTER_ARN"
 
 echo "Successfully added a new database instance $DB_INSTANCE_IDENTIFIER and promoted the region cluster $REGION_CLUSTER_ID to a standalone cluster."
+end_time=$(date +%s)
+echo "Task ended at $(date -d @$end_time +'%Y-%m-%d %H:%M:%S')"
+
+duration=$((end_time-start_time))
+echo "Task duration: $duration seconds"
